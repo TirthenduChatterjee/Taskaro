@@ -1,0 +1,48 @@
+# Node.js
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Environment variables
+.env
+.env.*.local
+
+# Logs
+logs/
+*.log
+logfile*
+pids/
+*.pid
+*.seed
+*.pid.lock
+
+# OS-specific files
+.DS_Store
+Thumbs.db
+
+# Debugging
+.vscode/
+.idea/
+
+# Build output
+dist/
+build/
+tmp/
+temp/
+
+# Coverage reports
+coverage/
+.nyc_output/
+
+# Optional npm cache
+.npm/
+
+# TypeScript
+*.tsbuildinfo
+
+# PM2 logs
+pids/
+*.pid
+*.log
+*.gz
