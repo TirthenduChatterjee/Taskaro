@@ -8,7 +8,7 @@ const taskRoutes = require('./Routes/taskRoutes');
 
 const PORT = process.env.PORT || 3000;
 app.use(cors({
-    origin: 'http://localhost:5173', 
+    origin: `${process.env.CLIENT_URL}`, 
     methods: ["GET", "POST",' PUT', "DELETE"],
     credentials:true
 }));
@@ -16,7 +16,7 @@ app.use(express.json());
 app.use('/api/tasks', taskRoutes);
 app.use('/api/users', userRoutes);
 app.get('/', (req, res) => {
-    res.send('Welcome to the Task Manager API');
+    res.send('Welcome to the TaskKero API');
 });
 
 

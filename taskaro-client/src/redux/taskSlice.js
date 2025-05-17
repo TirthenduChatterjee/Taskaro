@@ -2,9 +2,9 @@ import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 import axios from 'axios';
 
 const token = JSON.parse(localStorage.getItem('userToken'));
-
+const baseUrl= import.meta.env.VITE_BASE_URL;
 export const fetchTasks = createAsyncThunk('tasks/fetchTasks', async () => {
-  const res = await axios.get("http://localhost:8000/api/tasks/getall", {
+  const res = await axios.get(`${baseUrl}/api/tasks/getall`, {
     headers: {
       Authorization: token
     }
@@ -17,7 +17,7 @@ export const addTask = createAsyncThunk('tasks/addTask', async (task) => {
     ...task,
     createdFor: task.createdFor ? task.createdFor.toISOString() : null
   };
-  const res = await axios.post('http://localhost:8000/api/tasks/create', payload, {
+  const res = await axios.post(`${baseUrl}/api/tasks/create`, payload, {
     headers: { Authorization: token }
   });
   return res.data;
@@ -25,7 +25,7 @@ export const addTask = createAsyncThunk('tasks/addTask', async (task) => {
 
 export const deleteTask = createAsyncThunk('tasks/deleteTask',  async (taskId, { rejectWithValue }) => {
     try {
-      await axios.delete(`http://localhost:8000/api/tasks/${taskId}`, {
+      await axios.delete(`${baseUrl}/api/tasks/${taskId}`, {
         headers: {
           Authorization: token
         }
@@ -41,7 +41,7 @@ export const updateTask = createAsyncThunk(
   async ({id, updatedData}, { rejectWithValue }) => {
     try {
       const response = await axios.put(
-        `http://localhost:8000/api/tasks/update/${id}`,
+        `${baseUrl}/api/tasks/update/${id}`,
        {...updatedData},
         {
           headers: {
