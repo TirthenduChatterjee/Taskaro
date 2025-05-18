@@ -15,7 +15,7 @@ const DeleteDialog = ({ onConfirm, taskTitle }) => {
     return (
         <Dialog>
             <DialogTrigger asChild>
-                <Button variant="icon" size="sm" className="invisible group-hover:visible transition-all cursor-pointer">
+                <Button variant="icon" size="sm" className=" transition-all cursor-pointer ">
                     <Trash2 className="text-red-600" />
                 </Button>
             </DialogTrigger>

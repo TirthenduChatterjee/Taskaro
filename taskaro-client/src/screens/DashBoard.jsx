@@ -104,10 +104,9 @@ const DashBoard = ({ allTask }) => {
         }
         console.log("Current taskStatus:", taskStatus);
         if (taskStatus === 'idle') {
-
             dispatch(fetchTasks());
         }
-    }, [taskStatus, dispatch]);
+    }, [taskStatus, dispatch, token]);
     const handleDelete = (taskId) => {
         dispatch(deleteTask(taskId))
             .unwrap()
@@ -129,7 +128,7 @@ const DashBoard = ({ allTask }) => {
 
                     <div className="flex items-center gap-6">
 
-                        <div className="flex items-center gap-2">
+                        <div className="items-center gap-2 hidden lg:flex">
                             <span className="text-sm text-muted-foreground">Sort by:</span>
                             <Select value={sortOption} onValueChange={setSortOption}>
                                 <SelectTrigger className="w-[180px]">
@@ -145,7 +144,7 @@ const DashBoard = ({ allTask }) => {
                                     <Popover>
                                         <PopoverTrigger asChild>
                                             <Button variant="outline" className="w-[200px] justify-start text-left font-normal">
-                                                {selectedDate ? format(selectedDate, "PPP") : <span>Pick a date</span>}
+                                                {selectedDate ? format(selectedDate, "PPP") : <span className='text-muted-foreground'>Pick a date</span>}
                                             </Button>
                                         </PopoverTrigger>
                                         <PopoverContent className="w-auto p-0">
@@ -231,7 +230,7 @@ const DashBoard = ({ allTask }) => {
                                     <span className={`text-lg ${isCompleted ? "text-blue-700" : isPending ? 'text-blue-300' : "text-blue-500"}`}>
                                         {task.status}
                                     </span>
-                                    <div className="flex">
+                                    <div className="flex visible lg:invisible lg:group-hover:visible transition-all">
                                         <TaskAddEdit edit={true} Task={{ ...task }} />
                                         <DeleteDialog onConfirm={() => handleDelete(task._id)} taskTitle={task.title} />
                                     </div>

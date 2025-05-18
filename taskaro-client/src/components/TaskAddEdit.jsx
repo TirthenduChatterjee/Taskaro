@@ -117,7 +117,7 @@ const TaskAddEdit = ({ edit, Task }) => {
     <Dialog >
       <DialogTrigger asChild>
         {edit ?
-          <Button variant="icon" size="sm" className="invisible group-hover:visible transition-all cursor-pointer">
+          <Button variant="icon" size="sm" className=" cursor-pointer">
             <SquarePen />
           </Button> :
 
@@ -126,7 +126,7 @@ const TaskAddEdit = ({ edit, Task }) => {
           </Button>
         }
       </DialogTrigger>
-      <DialogContent className="sm:max-w-[500px] ">
+      <DialogContent className=" max-w-full lg:max-w-[500px] ">
         <DialogHeader>
           <DialogTitle>{edit ? 'Edit Task' : 'Add Task'}</DialogTitle>
           <DialogDescription>Fill in the task details and click {edit ? 'Edit Task' : 'Add Task'}.</DialogDescription>

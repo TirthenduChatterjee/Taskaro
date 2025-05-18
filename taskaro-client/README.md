@@ -1,12 +1,113 @@
-# React + Vite
+# 🚀 Taskaro — Fullstack Task Management App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+**Taskaro** is a powerful and elegant task management tool. Designed with a modern UI and robust backend, it helps users track, manage, and organize tasks with ease.
 
-Currently, two official plugins are available:
+🌐 **Live Site**: [https://your-site.netlify.app](https://your-site.netlify.app)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## Expanding the ESLint configuration
+## 📸 Features Showcase
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### 🔐 Authentication
+
+- Secure login and signup
+- JWT-based authorization
+
+**Login Screen**
+
+![Login](https://your-image-link.com/login.png)
+
+**Sign Up**
+
+![Sign Up](https://your-image-link.com/signup.png)
+
+---
+
+### 🧾 Task Management
+
+- Add, Edit, and Delete tasks
+- Task calendar support with due dates
+
+**Add Task**
+
+![Add Task](https://your-image-link.com/addtask.png)
+
+**Edit Task**
+
+![Edit Task](https://your-image-link.com/edit-task.png)
+
+**Delete Task**
+
+![Delete Task](https://your-image-link.com/delete-task.png)
+
+**Task Calendar**
+
+![Task Calendar](https://your-image-link.com/task-calendar.png)
+
+---
+
+### 📅 Task Views
+
+- View all tasks
+- View only today's tasks
+
+**All Tasks View**
+
+![All Tasks](https://your-image-link.com/all-task.png)
+
+**Today's Task View**
+
+![Today's Task](https://your-image-link.com/todays-task.png)
+
+---
+
+### 🎯 Filtering and Sorting
+
+- Filter by task status (completed, pending, etc.)
+- Sort tasks by name, date, or priority
+
+**Filter by Status**
+
+![Filter](https://your-image-link.com/filter-status.png)
+
+**Sort Functionality**
+
+![Sort](https://your-image-link.com/sort.png)
+
+---
+
+### 🌙 Light and Dark Mode
+
+- Automatically adapts to system theme
+- Manual toggle available
+
+**Light Theme**
+
+![Light Theme](https://your-image-link.com/light-theme.png)
+
+---
+
+## 🧰 Tech Stack
+
+### Frontend
+- React
+- Redux Toolkit
+- React Router
+- Tailwind CSS
+- Axios
+
+### Backend
+- Node.js
+- Express.js
+- MongoDB with Mongoose
+- JWT Auth
+
+---
+
+## ⚙️ Run Locally
+
+### Backend Setup
+```bash
+cd server
+npm install
+npm run dev
