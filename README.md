@@ -2,7 +2,7 @@
 
 **Taskaro** is a powerful and elegant task management tool. Designed with a modern UI and robust backend, it helps users track, manage, and organize tasks with ease.
 
-🌐 **Live Site**: [https://taskaroapp.netlify.app](https://taskaroapp.netlify.app/allTask)
+🌐 **Live Site**: [https://taskaroapp.netlify.app](https://taskaroapp.netlify.app)
 
 ---
 ## 🧰 Tech Stack
