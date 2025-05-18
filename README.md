@@ -5,6 +5,24 @@
 🌐 **Live Site**: [https://taskaroapp.netlify.app](https://taskaroapp.netlify.app/allTask)
 
 ---
+## 🧰 Tech Stack
+
+### 🖼️ Frontend
+- ⚛️ **React**
+- 📦 **Redux Toolkit**
+- 🧭 **React Router**
+- 🎨 **Tailwind CSS**
+- 🌐 **Axios**
+
+### 🛠️ Backend
+- 🟢 **Node.js**
+- 🚂 **Express.js**
+- 🍃 **MongoDB + Mongoose**
+- 🔐 **JWT Authentication**
+
+---
+
+---
 
 ## 📸 Features Showcase
 
@@ -74,24 +92,6 @@
 **Light Theme**  
 ![Light Theme](https://github.com/TirthenduChatterjee/Taskaro/blob/main/taskaro-client/screenshots/Light%20Theme.png?raw=true)
 
----
-
-## 🧰 Tech Stack
-
-### Frontend
-- React
-- Redux Toolkit
-- React Router
-- Tailwind CSS
-- Axios
-
-### Backend
-- Node.js
-- Express.js
-- MongoDB with Mongoose
-- JWT Authentication
-
----
 
 ## ⚙️ Run Locally
 
@@ -101,3 +101,25 @@
 cd server
 npm install
 npm run dev
+```
+  ### 🌱 Environment Variables for Backend (`/server/.env`)
+
+```env
+PORT=5000
+MONGO_URI=your-mongo-db-uri
+JWT_SECRET=your-jwt-secret
+```
+### 📁 Frontend Setup
+
+```bash
+cd taskaro-client
+npm install
+npm run dev
+```
+  ### 🌱 Frontend Environment Variables (`/taskaro-client/.env`)
+
+Create a `.env` file inside your `taskaro-client` directory and add the following:
+
+```env
+VITE_BASE_URL=http://localhost:5000
+```
