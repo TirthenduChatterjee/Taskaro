@@ -10,9 +10,10 @@ import {
     CardTitle,
 } from "../components/ui/card"
 import { Input } from "../components/ui/input"
-import { Link, Navigate } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 
 const SignUp = () => {
+    const navigate= useNavigate()
     const [formData, setFormData] = useState({
         firstName: '',
         lastName: '',
@@ -48,7 +49,7 @@ const SignUp = () => {
             console.log("Success:", response.data)
             if (response.data.token) {
             localStorage.setItem('userToken', JSON.stringify(response.data.token))
-            Navigate('/today', { replace: true, state: { user: response.data.user} })
+            navigate('/today', { replace: true, state: { user: response.data.user} })
             }
             // Optionally redirect or show a message
         } catch (error) {
